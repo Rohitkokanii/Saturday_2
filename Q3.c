@@ -14,3 +14,20 @@ Write functions perform the tasks:
 3. Counting the passed and failed subjects - void CountSubjects (int mks[], int n);
 */
 
+#include<stdio.h>
+#include "function.h"
+#define Max 6
+int main() {
+	int sub[Max];
+
+	//Accept Marks
+	acceptMarks(&sub,Max);
+	
+	//Display Marks
+	displayMarks(&sub,Max);
+
+	//count sub passed failed
+	countSubjects(&sub,Max);
+
+	return 0;
+}
