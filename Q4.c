@@ -11,6 +11,42 @@ the following tasks:
 #include "function.h"
 
 int main() {
+	int choice;
+	char courses[][SIZE] = {
+		"Java"
+		,"C Programming"
+		,"Python"
+		,"Sql"
+		,"Dot Net"
+	};
 
+	while (1) {
+		printf("\n 1.search courses");
+		printf("\n 2.sort Alphabetically");
+		printf("\n 3.Display");
+		printf("\n 4.sort by length");
+		printf("\n 5.exit \nEnter choice \n");
+		scanf_s("%d", &choice);
+
+		switch (choice) {
+		case 1:
+			searchCourse(courses);
+			break;
+		case 2:
+			sortAlphabetically(courses);
+			break;
+		case 3:
+			Display(courses);
+			break;
+		case 4:
+			sortByLenght(courses);
+			break;
+		case 5:
+			printf("\nExit!!!\n");
+			exit(0);
+			break;
+		default:printf("\nInvalid !");
+		}
+	}
 	return 0;
 }

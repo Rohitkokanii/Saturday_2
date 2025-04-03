@@ -1,3 +1,9 @@
+#include<string.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define SIZE 30
+
 //Q1
 
 int findFact(int);
@@ -18,7 +24,13 @@ void displayMarks(int* sub, int Max);
 
 void countSubjects(int *sub,int Max);
 
-//Q4 ~ remain
+//Q4 
+
+void searchCourse(char courses[][SIZE]);
+
+void sortAlphabetically(char courses[][SIZE]);
+
+void Display(char courses[][SIZE]);
 
 //Q5
 

@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+#include"function.h"
+
 //Q1
 
 int findFact(int num) {
@@ -78,7 +80,49 @@ void countSubjects(int* sub, int Max) {
 	
 }
 
-//Q4 ~ remain
+//Q4
+
+void searchCourse(char courses[][SIZE]) {
+	printf("\n enter course to search : ");
+	char ch[SIZE];
+	fflush(stdin);
+	gets_s(ch,SIZE);
+
+	int i = 0;
+	while (i<=4) {
+		int n = strcmp(ch,courses[i]);
+		if (n == 0)
+			break;
+		i++;
+	}
+	printf("\n %s course found at index %d \n",courses[i],i);
+}
+
+void sortAlphabetically(char courses[][SIZE]) {
+	for (int k = 1; k <= 4; k++) {
+		for (int i = 0; i < 4; i++ ) {
+			int n = strcmp(courses[i],courses[i+1]);
+			if (n > 0) {
+				char temp[SIZE];
+				strcpy_s(temp, SIZE, courses[i]);
+				strcpy_s(courses[i],SIZE,courses[i+1]);
+				strcpy_s(courses[i+1],SIZE,temp);
+			}
+		}
+	}
+}
+
+void Display(char courses[][SIZE]) {
+
+	for (int i = 0; i <= 4; i++) {
+		printf("\n%s\n",courses[i]);
+	}
+}
+
+void sortByLenght(char courses[][SIZE]) {
+
+}
+
 
 //Q5
 
