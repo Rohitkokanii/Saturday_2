@@ -5,6 +5,8 @@ the following tasks:
 • Search a course
 • Sort the list of courses in ascending order of alphabets
 • Sort the list of courses in ascending order of the length of their spelling.
+
+
 */
 
 #include<stdio.h>
